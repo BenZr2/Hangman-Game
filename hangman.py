@@ -61,7 +61,7 @@ def draw_hangman():
 while tries > 0 and "_" in tiles:
     draw_hangman()
     print(tiles)
-    guess = input("Guess a letter: ")
+    guess = input("Guess a letter: ").lower()
     if guess in word and not guess in already_guessed and len(guess) == 1:
         print("Correct")
         for i, letter in enumerate(word):
